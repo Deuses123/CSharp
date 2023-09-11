@@ -1,0 +1,14 @@
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\bin\Debug\net6.0\Practice.work1.exe
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\bin\Debug\net6.0\Practice.work1.deps.json
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\bin\Debug\net6.0\Practice.work1.runtimeconfig.json
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\bin\Debug\net6.0\Practice.work1.dll
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\bin\Debug\net6.0\Practice.work1.pdb
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.AssemblyInfoInputs.cache
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.AssemblyInfo.cs
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.csproj.CoreCompileInputs.cache
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.dll
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\refint\Practice.work1.dll
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.pdb
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\Practice.work1.genruntimeconfig.cache
+C:\Users\77018\Desktop\CSharp\Practical Work\Practice.work1\Practice.work1\obj\Debug\net6.0\ref\Practice.work1.dll
