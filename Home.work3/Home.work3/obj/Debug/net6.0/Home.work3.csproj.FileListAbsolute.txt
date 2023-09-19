@@ -1,0 +1,14 @@
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\bin\Debug\net6.0\Home.work3.exe
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\bin\Debug\net6.0\Home.work3.deps.json
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\bin\Debug\net6.0\Home.work3.runtimeconfig.json
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\bin\Debug\net6.0\Home.work3.dll
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\bin\Debug\net6.0\Home.work3.pdb
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.AssemblyInfoInputs.cache
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.AssemblyInfo.cs
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.csproj.CoreCompileInputs.cache
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.dll
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\refint\Home.work3.dll
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.pdb
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\Home.work3.genruntimeconfig.cache
+C:\Users\Sanzhar\source\repos\Home.work3\Home.work3\obj\Debug\net6.0\ref\Home.work3.dll
