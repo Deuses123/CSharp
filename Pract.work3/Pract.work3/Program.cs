@@ -1,587 +1,388 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practice.work1
+namespace Pract.work3
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            var rand = new Random();
+            Console.WriteLine("***StrF11***");
+            StrF11();
 
-            //1 задача
-            Console.WriteLine("1) Введите три числа");
-            F1();
+            Console.WriteLine("***StrF12***");
+            StrF12();
 
-            //2 задача
-            Console.WriteLine("2) Три числа по столбику");
-            F2();
+            Console.WriteLine("***StrF13***");
+            StrF13();
 
-            //3 задача
-            Console.WriteLine("3) Введите сантимеры");
-            Console.WriteLine("В метрах - " + F3());
-
-            //4 задача
-            Console.WriteLine("3)");
-            F4();
-
-            //5 задача
-            Console.WriteLine("4)");
-            F5();
-
-            //6 задача
-            Console.WriteLine("6)");
-            F6();
-
-            //7 задача
-            Console.WriteLine("7)");
-            F7();
-
-            //8 задача
-            Console.WriteLine("8)");
-            F8();
-
-            //9 задача
-            Console.WriteLine("9)");
-            F9();
-
-            //10 задача
+            Console.WriteLine("***F10***");
             F10();
 
+            Console.WriteLine("***CountWordsWithMatchingFirstLastChar***");
+            Console.WriteLine("Введите строку:");
+            string input = Console.ReadLine();
 
+            int count = CountWordsWithMatchingFirstLastChar(input);
 
-            //20 задача свап с помощью значении
-            int a = 1;
-            int b = 2;
-            (a, b) = Swap20(a, b);
-            Console.WriteLine("20) " + a + " " + b);
+            Console.WriteLine($"Количество слов с совпадающими первым и последним символами: {count}");
+            Console.ReadLine();
 
+            Console.WriteLine("***example1 ***");
+            Example1();
+            Console.WriteLine("***example2 ***");
+            int[] arr1 = { 1, 2, 3, 4, 5 };
+            int[] arr2 = { 3, 4, 5, 6, 7 };
+            int[] result = Example2(arr1, arr2);
 
-            //21 задача свап с помощью ссылок
-            a = 1;
-            b = 2;
-            Swap21(ref a, ref b);
-            Console.WriteLine("21) " + a + " " + b);
+            Console.WriteLine("Результат Example2:");
+            Console.WriteLine(string.Join(", ", result));
+            Console.WriteLine("***example3 ***");
+            Console.WriteLine("Введите строку для проверки на палиндром:");
+            string str = Console.ReadLine();
+            bool isPalindrome = Example3(str);
 
-            //22 задача 
-            Console.Write("22)\nВведите значение x: ");
-            int x = int.Parse(Console.ReadLine());
-
-            Console.Write("Введите значение y: ");
-            int y = int.Parse(Console.ReadLine());
-
-            double result = F22(x, y);
-
-            Console.WriteLine("Результат: " + result);
-
-            //23 задача
-            Console.Write("23)\nВведите часы (0-23): ");
-            int hours = int.Parse(Console.ReadLine());
-
-            Console.Write("Введите минуты (0-59): ");
-            int minutes = int.Parse(Console.ReadLine());
-
-            Console.Write("Введите секунды (0-59): ");
-            int seconds = int.Parse(Console.ReadLine());
-
-            result = F23(hours, minutes, seconds);
-
-            if (result != -1)
+            if (isPalindrome)
             {
-                Console.WriteLine("Количество секунд с начала дня: " + result);
+                Console.WriteLine("Введенная строка является палиндромом.");
             }
             else
             {
-                Console.WriteLine("Ошибка: некорректные данные.");
+                Console.WriteLine("Введенная строка не является палиндромом.");
             }
+            Console.WriteLine("***example4 ***");
+            Console.WriteLine("Введите предложение:");
+            string sentence = Console.ReadLine();
+            int wordCount = Example4(sentence);
 
-            //24 задача
-            Console.Write("24)\nВведите месяц (1-12): ");
-            int month = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Количество слов в предложении: {wordCount}");
 
-            Console.Write("Введите день (1-31): ");
-            int day = int.Parse(Console.ReadLine());
-
-            result = F24(month, day);
-
-            if (result != -1)
-            {
-                Console.WriteLine("Количество дней с начала года: " + result);
-            }
-            else
-            {
-                Console.WriteLine("Ошибка: некорректные данные.");
-            }
-
-            //25 задача
-            Console.Write("25)\nВведите месяц (1-12): ");
-            month = int.Parse(Console.ReadLine());
-
-            Console.Write("Введите день (1-31): ");
-            day = int.Parse(Console.ReadLine());
-
-            result = F25(month, day);
-
-            if (result != -1)
-            {
-                Console.WriteLine("Количество дней с начала года: " + result);
-            }
-            else
-            {
-                Console.WriteLine("Ошибка: некорректные данные.");
-            }
-
-            //26 задача
-            Console.WriteLine("29) три аргумента - 5, (8,2), (7, 1, 10)");
-            Console.WriteLine("Наименьшее число: " + F26()); // Используем значения по умолчанию
-            Console.WriteLine("Наименьшее число: " + F26(5)); // Один аргумент
-            Console.WriteLine("Наименьшее число: " + F26(8, 2)); // Два аргумента
-            Console.WriteLine("Наименьшее число: " + F26(7, 1, 10));
-
-            //27 задача
-            a = rand.Next(1, 100);
-            Console.WriteLine("27) Четное ли число " + a + " = " + Even27(a));
-
-            //28 задача
-            a = 30;
-            b = 14;
-            int c = 20;
-            Console.WriteLine("28) Минимальное значение из " + a + b + c + " -> " + F28(a, b, c));
-
-            //29 задача
-            Console.WriteLine("29) ");
-            F29();
-
-            //30 задача
-            Console.WriteLine("30) " + F30(10, 3));
-
-            //31 задача
-            Console.WriteLine("31) " + F31(10, 3));
+            Console.ReadLine();
+            Console.WriteLine("***example5 ***");
+            Example5();
         }
-        static void F1()
-        {
-            int a, b, c = 0;
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            c = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(a + " " + b + " " + c);
-        }
-        static void F2()
-        {
-            Console.WriteLine(5);
-            Console.WriteLine(10);
-            Console.WriteLine(21);
-        }
-        static int F3()
-        {
 
-            int sm = 0;
-            sm = Convert.ToInt32(Console.ReadLine());
-            return (sm / 100);
-        }
-        static void F4()
-        {
-            int days = 234;
-            Console.WriteLine("В неделях " + days / 7);
-        }
-        static void F5()
-        {
-            bool flag = true;
-            while (flag)
-            {
-                Console.Write("Введите число:");
-                string a = Console.ReadLine();
-                if (int.TryParse(a, out int number))
-                {
-                    if (number / 10 > 0 && number / 10 < 10)
-                    {
-                        flag = false;
-                        Console.Write("Число десятков:" + number / 10);
-                        Console.WriteLine();
-                        Console.Write("Число единиц:" + number % 10);
-                        Console.WriteLine();
-                        Console.Write("Сумма цифр:" + ((number / 10) + (number % 10)));
-                        Console.WriteLine();
-                        Console.Write("Произведение цифр:" + ((number / 10) * (number % 10)));
-                        Console.ReadLine();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Введите двузначное число!");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Ошибка введите допустимый тип переменной! (int). Нажмите Enter");
-                    Console.ReadLine();
-                }
-            }
-        }
-        static void F6()
-        {
-            bool a = true;
-            bool b = false;
-            bool c = false;
-            bool d = a || b;
-            bool e = a && b;
-            bool f = b || c;
-            Console.WriteLine(d + " " + e + " " + f);
-        }
-        static void F7()
-        {
-            int squareSide = 0;
-            int radius = 0;
-            Console.WriteLine("Please write squareSide:");
-            squareSide = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please write radius:");
-            radius = Convert.ToInt32(Console.ReadLine());
-            double squareOfCircle = 3.14 * radius * radius;
-            if (squareSide * squareSide > squareOfCircle)
-            {
-                Console.WriteLine("squareOfSquare biger than squareOfCircle");
-            }
-            else if (squareSide * squareSide < squareOfCircle)
-            {
-                Console.WriteLine("squareOfCircle biger than squareOfSquare");
-            }
-            else
-            {
-                Console.WriteLine("Equal");
-            }
-        }
-        static void F8()
-        {
-            double massOfFirstObject = 0;
-            double massOfSecondObject = 0;
-            double volumeOfFirstObject = 0;
-            double volumeOfSecondObject = 0;
-
-            Console.WriteLine("Please write the value for all variable: ");
-            massOfFirstObject = Convert.ToInt32(Console.ReadLine());
-            massOfSecondObject = Convert.ToInt32(Console.ReadLine());
-            volumeOfFirstObject = Convert.ToInt32(Console.ReadLine());
-            volumeOfSecondObject = Convert.ToInt32(Console.ReadLine());
-
-            double densityOfFirstObject = massOfFirstObject / volumeOfFirstObject;
-            double densityOfSecondObject = massOfSecondObject / volumeOfSecondObject;
-
-            if (densityOfSecondObject > densityOfFirstObject)
-            {
-                Console.WriteLine("densityOfSecondObject: " + densityOfSecondObject);
-            }
-            else if (densityOfSecondObject < densityOfFirstObject)
-            {
-                Console.WriteLine("densityOfFirstObject: " + densityOfFirstObject);
-            }
-            else
-            {
-                Console.WriteLine("Equals");
-            }
-        }
-        static void F9()
-        {
-            Console.Write("Введите сопротивление для первого участка: ");
-            double resistance1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите напряжение для первого участка: ");
-            double voltage1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Введите сопротивление для второго участка: ");
-            double resistance2 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите напряжение для второго участка: ");
-            double voltage2 = Convert.ToDouble(Console.ReadLine());
-
-            double current1 = voltage1 / resistance1;
-            double current2 = voltage2 / resistance2;
-
-            if (current1 < current2)
-            {
-                Console.WriteLine("Ток на участке 1 меньше: " + current1 + " Ампер");
-                Console.ReadLine();
-            }
-            else if (current2 < current1)
-            {
-                Console.WriteLine("Ток на участке 2 меньше: " + current2 + " Ампер");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Токи на обоих участках равны: " + current1 + " Ампер");
-                Console.ReadLine();
-            }
-        }
+        /*
+         Написать программу, в которой по малой русской букве выводится соответствующая большая.
+         */
         static void F10()
         {
-            Console.WriteLine("Выберите задание:");
-            Console.WriteLine("a) Все целые числа от 20 до 35.");
-            Console.WriteLine("b) Квадраты всех целых чисел от 10 до b (значение b вводится с клавиатуры; b > 10).");
-            Console.WriteLine("c) Третьи степени всех целых чисел от a до 50 (значение a вводится с клавиатуры; a < 50).");
-            Console.WriteLine("d) Все целые числа от a до b (значения a и b вводятся с клавиатуры; b > a).");
-
-            char choice;
-
-            while (!char.TryParse(Console.ReadLine(), out choice) || (choice != 'a' && choice != 'b' && choice != 'c' && choice != 'd'))
+            char a = '0';
+            Console.WriteLine("Введите букву и введите 'q', чтобы остановить:");
+            while (a != 'q')
             {
-                Console.WriteLine("Выбор задания некорректен. Попробуйте ещё раз:");
-            }
-
-            Console.WriteLine();
-
-            switch (choice)
-            {
-                case 'a':
-                    for (int i = 20; i <= 35; i++)
-                    {
-                        Console.WriteLine(i);
-                    }
-                    break;
-                case 'b':
-                    int b;
-                    do
-                    {
-                        if (TryParseInt("Введите значение b (b > 10):", out b) && b > 10)
-                        {
-                            break;
-                        }
-                        Console.WriteLine("Значение b должно быть больше 10. Попробуйте ещё раз:");
-                    } while (true);
-
-                    for (int i = 10; i <= b; i++)
-                    {
-                        Console.WriteLine(i * i);
-                    }
-                    break;
-                case 'c':
-                    int a;
-                    do
-                    {
-                        if (TryParseInt("Введите значение a (a < 50):", out a) && a < 50)
-                        {
-                            break;
-                        }
-                        Console.WriteLine("Значение a должно быть меньше 50. Попробуйте ещё раз:");
-                    } while (true);
-
-                    for (int i = a; i <= 50; i++)
-                    {
-                        Console.WriteLine(Math.Pow(i, 3));
-                    }
-                    break;
-                case 'd':
-                    int start, end;
-                    do
-                    {
-                        if (TryParseInt("Введите значение a:", out start) &&
-                            TryParseInt("Введите значение b:", out end) && end > start)
-                        {
-                            break;
-                        }
-                        Console.WriteLine("Значение b должно быть больше a. Попробуйте ещё раз:");
-                    } while (true);
-
-                    for (int i = start; i <= end; i++)
-                    {
-                        Console.WriteLine(i);
-                    }
-                    break;
+                a = char.Parse(Console.ReadLine());
+                Console.WriteLine(a + " -> " + char.ToUpper(a));
             }
         }
 
-        static bool TryParseInt(string message, out int result)
+        /*
+         Дано предложение из 10 слов. Заполнить ими массив из 10 элементов.
+         */
+        static void StrF13()
         {
-            Console.Write(message + " ");
-            return int.TryParse(Console.ReadLine(), out result);
+            string str = "В лесу родилась елочка в лесу она росла зимой и летом стройная зеленая была";
+            string[] arr = str.Split(' ');          
+
+            for (int i=0;i<arr.Length;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.ReadLine();
         }
-        static int printSum()
+        /*
+         Дан текст. Найти сумму всех имеющихся в нем чисел
+         */
+        static void StrF12()
         {
-            int i, j = 0;
-            i = Convert.ToInt32(Console.ReadLine());
-            j = Convert.ToInt32(Console.ReadLine());
-            return i + j;
-        }
-        static void printName()
-        {
-            string name = "", surname = "";
-            Console.WriteLine("What is your name?: ");
-            name = Console.ReadLine();
-            Console.WriteLine("What is your surname?: ");
-            surname = Console.ReadLine();
-            Console.WriteLine("Your name is " + name + ", Your surname is " + surname);
-        }
-        static (int, int) Swap20(int a, int b)
-        {
-            return (b, a);
-
-        }
-        static void Swap21(ref int a, ref int b)
-        {
-            (b, a) = (a, b);
-        }
-        static double F22(int x, int y)
-        {
-            if (x == 0 && y == 0)
-            {
-                return 0;
-            }
-            else if (y == 0)
-            {
-                return 12.0 / x;
-            }
-            else if (x == 0)
-            {
-                return 12.0 / y;
-            }
-            else
-            {
-                return 144.0 / (x * y);
-            }
-        }
-        static int F23(int h, int m, int s)
-        {
-            if (h < 0 || h >= 24 || m < 0 || m >= 60 || s < 0 || s >= 60)
-            {
-                return -1;
-            }
-
-            int totalSeconds = h * 3600 + m * 60 + s;
-
-            return totalSeconds;
-        }
-        static int F24(int m, int d)
-        {
-            if (m < 1 || m > 12 || d < 1 || d > 30)
-            {
-                return -1;
-            }
-
-            int totalDays = (m - 1) * 30 + d;
-
-            return totalDays;
-        }
-        static int F25(int m, int d)
-        {
-            int[] daysInMonth = { 31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-            if (m < 1 || m > 12 || d < 1 || d > daysInMonth[m - 1])
-            {
-                return -1;
-            }
-
-            int totalDays = 0;
-
-            for (int i = 0; i < m - 1; i++)
-            {
-                totalDays += daysInMonth[i];
-            }
-
-            totalDays += d;
-
-            return totalDays;
-        }
-        static int F26(int m1 = 999, int m2 = 999, int m3 = 999)
-        {
-            if (m1 < 1 || m1 > 999) m1 = 999;
-            if (m2 < 1 || m2 > 999) m2 = 999;
-            if (m3 < 1 || m3 > 999) m3 = 999;
-
-            int minNumber = m1;
-
-            if (m2 < minNumber)
-            {
-                minNumber = m2;
-            }
-            if (m3 < minNumber)
-            {
-                minNumber = m3;
-            }
-
-            return minNumber;
-        }
-        static bool Even27(int n)
-        {
-            return n % 2 == 0;
-        }
-        static int F28(int a, int b, int c)
-        {
-
-            if (a <= b && a <= c)
-            {
-                return a;
-            }
-            else if (b <= a && b <= c)
-            {
-                return b;
-            }
-            else
-            {
-                return c;
-            }
-
-        }
-        static void F29()
-        {
-            Random rand = new Random();
-
-            for (int i = 0; i < 10; i++)
-            {
-                int grade = rand.Next(2, 6);
-                string message;
-
-                switch (grade)
-                {
-                    case 2:
-                        message = "Неуд";
-                        break;
-                    case 3:
-                        message = "Удовл";
-                        break;
-                    case 4:
-                        message = "Хорошо";
-                        break;
-                    case 5:
-                        message = "Отлично";
-                        break;
-                    default:
-                        message = "Недопустимая оценка";
-                        break;
-                }
-
-                Console.WriteLine($"Оценка: {grade}, Результат: {message}");
-            }
-        }
-        static int F30(int M, int N)
-        {
+            string num = "slsnlsj 131321 23123";
+            string[] temp = num.Split(' ');
+            int chislo = 0;
             int sum = 0;
 
-            // Проверяем, чтобы M было нечетным, иначе увеличиваем M на 1
-            if (M % 2 == 0)
+            foreach (string i in temp )
             {
-                M++;
+                if (int.TryParse(i, out chislo))
+                {
+                    sum += chislo;
+                }
             }
-
-            for (int i = M; i <= N; i += 2)
-            {
-                sum += i;
-            }
-
-            return sum;
+            Console.WriteLine("Summa:"+sum);
+            Console.ReadLine();
         }
-        static int F31(int N, int n)
+
+        /*
+         Дан текст. Определить количество цифр в нем.
+         */
+        static void StrF11()
         {
+            string a = "hsadas 1 4 asd 6 a 3";
+            string[] temp = a.Split(' ');
 
-            int result = N;
 
-            while (result % n != 0)
+            int count = 0;
+            int chislo = 0;
+            foreach (string i in temp)
             {
-                result++;
+                if (int.TryParse(i, out chislo))
+                {
+                    count++;
+                }
             }
+            Console.WriteLine(count);
+            Console.ReadLine();
 
-            return result;
+        }
+        /*
+         Дана строка символов длиной не более 255 символов. Группы символов, разделенные пробелами и 
+        не содержащие пробелов внутри себя, будем называть словами. 
+        Найти количество слов, у которых первый и последний символы совпадают между собой.*/
+        static int CountWordsWithMatchingFirstLastChar(string input)
+        {
+            int count = 0;
+
+            string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string word in words)
+            {
+                if (word.Length >= 2 && word[0] == word[word.Length - 1])
+                {
+                    count++;
+                }
+            }
+            
+            return count;
         }
 
-    }
+        /*
+         Объявить одномерный (5 элементов ) массив с именем A и двумерный массив (3 строки, 4 столбца) дробных чисел с именем B. 
+        Заполнить одномерный массив А числами, введенными с клавиатуры пользователем, а двумерный массив В случайными числами с помощью циклов. 
+        Вывести на экран значения массивов: массива А в одну строку, массива В — в виде матрицы. 
+        Найти в данных массивах общий максимальный элемент, минимальный элемент, общую сумму всех элементов,
+        общее произведение всех элементов, сумму четных элементов массива А, сумму нечетных столбцов массива В.
+         */
+        public static void Example1()
+        {
+            int[] A = new int[5];
+            int[,] B = new int[3, 4];
+            Console.WriteLine("Заполните массив А: ");
+            for (int i = 0; i < A.Length; i++)
+            {
+                A[i] = int.Parse(Console.ReadLine());
+            }
+            int rows = B.GetLength(0);
+            int cols = B.GetLength(1);
+            Random rnd = new Random();
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    B[i, j] = rnd.Next(1, 100);
+                }
+            }
+            int max = A[0];
+            int min = A[0];
+            int sum = 0;
+            long proiz = 1;
+            int sum4et = 0;
+            Console.WriteLine("Массив А: ");
+            for (int i = 0; i < A.Length; i++)
+            {
+                Console.Write(A[i] + " ");
+                if (A[i] > max)
+                {
+                    max = A[i];
+                }
+                if (A[i] < min)
+                {
+                    min = A[i];
+                }
+                sum += A[i];
+                proiz *= A[i];
+                if (A[i] % 2 == 0)
+                {
+                    sum4et += A[i];
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("MAX A: " + max);
+            Console.WriteLine("MIN A: " + min);
+            Console.WriteLine("SUM A: " + sum);
+            Console.WriteLine("Сумма Произведение A: " + proiz);
+            Console.WriteLine("Сумма четных A: " + sum4et);
+            max = A[0];
+            min = B[0, 0];
+            sum = 0;
+            proiz = 1;
+            int sumne4et = 0;
+            Console.WriteLine("Массив В: ");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(B[i, j] + " ");
+                    if (B[i, j] > max)
+                    {
+                        max = B[i, j];
+                    }
+                    if (B[i, j] < min)
+                    {
+                        min = B[i, j];
+                    }
+                    sum += B[i, j];
+                    proiz *= B[i, j];
+                    if (j % 2 != 0)
+                    {
+                        sumne4et += B[i, j];
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("MAX B: " + max);
+            Console.WriteLine("MIN B: " + min);
+            Console.WriteLine("SUM B: " + sum);
+            Console.WriteLine("Сумма Произведение B: " + proiz);
+            Console.WriteLine("Сумма не четных столбцов B: " + sumne4et);
+        }
 
+        /*
+         Даны 2 массива размерности M и N соответственно. 
+        Необходимо переписать в третий массив общие элементы первых двух массивов без повторений.
+         */
+        public static int[] Example2(int[] arr1, int[] arr2)
+        {
+            int m = arr1.Length;
+            int n = arr2.Length;
+            int count = 0;
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (arr1[i] == arr2[j])
+                    {
+                        count++;
+                    }
+                }
+            }
+            int[] arr = new int[count];
+            count = 0;
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (arr1[i] == arr2[j])
+                    {
+                        arr[count++] = arr1[i];
+                    }
+                }
+            }
+            return arr;
+        }
+
+        /*
+         Пользователь вводит строку. Проверить, является ли эта строка палиндромом. 
+        Палиндромом называется строка, которая одинаково читается слева направо и справа налево.
+         */
+        public static bool Example3(string str)
+        {
+            bool flag = true;
+            char[] subString1 = new char[str.Length];
+            char[] subString2 = new char[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                subString1[i] = str[i];
+            }
+            int j = 0;
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                subString2[j++] = str[i];
+            }
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!(subString1[i] == subString2[i]))
+                {
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+
+        /*
+         Подсчитать количество слов во введенном предложении
+         */
+        public static int Example4(string str)
+        {
+            string[] arr = str.Split(' ');
+
+            return arr.Length;
+        }
+
+        /*
+         Дан двумерный массив размерностью 5×5, заполненный случайными числами из диапазона от –100 до 100. 
+        Определить сумму элементов массива, расположенных между минимальным и максимальным элементами.
+         */
+        public static void Example5()
+        {
+            Random rand = new Random();
+            int[,] arr = new int[5, 5];
+            int rows = arr.GetLength(0);
+            int cols = arr.GetLength(1);
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    arr[i, j] = rand.Next(-100, 100);
+                }
+            }
+
+            int min = arr[0, 0];
+            int max = arr[0, 0];
+            int[] minIndex = { 0, 0 };
+            int[] maxIndex = { 0, 0 };
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(arr[i, j] + " ");
+                    if (arr[i, j] > max)
+                    {
+                        max = arr[i, j];
+                        maxIndex[0] = i;
+                        maxIndex[1] = j;
+                    }
+                    if (arr[i, j] < min)
+                    {
+                        min = arr[i, j];
+                        minIndex[0] = i;
+                        minIndex[1] = j;
+                    }
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Minimum: " + min);
+            Console.WriteLine("Maximum: " + max);
+
+            int sum = 0;
+            int startRow = Math.Min(minIndex[0], maxIndex[0]);
+            int endRow = Math.Max(minIndex[0], maxIndex[0]);
+            int startCol = Math.Min(minIndex[1], maxIndex[1]);
+            int endCol = Math.Max(minIndex[1], maxIndex[1]);
+
+            for (int i = startRow; i <= endRow; i++)
+            {
+                for (int j = startCol; j <= endCol; j++)
+                {
+                    sum += arr[i, j];
+                }
+            }
+
+            Console.WriteLine("Сумма элементов между минимальным и максимальным: " + sum);
+        }
+    }
 }
