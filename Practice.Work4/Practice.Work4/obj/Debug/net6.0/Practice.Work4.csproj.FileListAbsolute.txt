@@ -1,0 +1,14 @@
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\bin\Debug\net6.0\Practice.Work4.exe
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\bin\Debug\net6.0\Practice.Work4.deps.json
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\bin\Debug\net6.0\Practice.Work4.runtimeconfig.json
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\bin\Debug\net6.0\Practice.Work4.dll
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\bin\Debug\net6.0\Practice.Work4.pdb
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.AssemblyInfoInputs.cache
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.AssemblyInfo.cs
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.csproj.CoreCompileInputs.cache
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.dll
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\refint\Practice.Work4.dll
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.pdb
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\Practice.Work4.genruntimeconfig.cache
+C:\Users\Sanzhar\source\repos\Practice.Work4\Practice.Work4\obj\Debug\net6.0\ref\Practice.Work4.dll
